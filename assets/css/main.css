@@ -43,3 +43,9 @@ a.navbar-brand {
 		margin-top: -1rem;
 	}
 } 
+
+@media only screen and (max-width:728px) and (orientation: landscape) {
+	h1.main-heading {
+		margin-top: -1rem;
+	}
+}

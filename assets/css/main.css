@@ -6,8 +6,12 @@
 }
 
 a.navbar-brand {
-	color: #CB4335!important;
+	/*color: #CB4335!important;*/
 	margin-left: 2rem;
+}
+
+#brandTitle {
+	color: #CB4335;
 }
 
 .lead {
@@ -46,7 +50,8 @@ a.navbar-brand {
 
 @media only screen and (max-width:728px) and (orientation: landscape) {
 	h1.main-heading {
-		margin-top: -4rem;
+		margin-top: -3rem;
+		font-size: 1rem;
 		color: #fff;
 	}
 }

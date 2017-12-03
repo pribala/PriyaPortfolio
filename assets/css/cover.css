@@ -1,0 +1,456 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+ color: #373240;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #EEEEEE;
+}
+
+body {
+  color: #373240;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background: url("../images/comp3.jpeg") no-repeat center center;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead {
+  margin-bottom: 2rem;
+
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem .25rem;
+  font-weight: 700;
+  color: #373240;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 .5rem;
+}
+
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.lead {
+  color: #373240;
+  font-weight: 600;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #373240;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+   .masthead {
+    position: absolute;
+    top: 0;
+  }
+
+  .mastfoot {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* Start the vertical centering */
+  /*.site-wrapper-inner {
+    vertical-align: middle;
+  }
+*/
+.cover-heading {
+  margin-top: 7rem;
+}
+
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 50rem;
+  }
+}
+
+/* Portfolio section */
+
+.portfolio-section {
+  color: #373240;
+  background-color: #EEEEEE;
+}
+
+.folio-links {
+  text-decoration: none;
+}
+
+
+/* Flipping Animation */
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip {
+  transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+/* hide back of pane during swap */
+ .back {
+  backface-visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*border: 1px solid;*/
+}
+
+.front {
+  backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+   for firefox 31 
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  /*background: linear-gradient(to right, rgba(203,0,0,0), rgba(255,0,0,0.5));*/
+}
+
+.card {
+  background: linear-gradient(to right, rgba(203,67,53,0), rgba(203,67,53,0.5));
+  border: 0;
+}
+
+.projImg {
+  width: 100%;
+}
+
+/* Link animation */
+
+.projLink {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.projLink:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.projLink:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #CB4335;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.projLink:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.projLink:after {
+  content: '' attr(data-hover) '';
+  width: 0;
+  overflow: hidden;
+  transition: width .1s ease-in-out;  
+  color: #CB4335;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.projLink:hover:after, .projLink:focus:after {
+  width: 100%  
+}
+
+/*992px
+772px min width*
+max 772px*/
+
+@media only screen and (max-width: 700px) {
+    .cover-heading {
+      margin-top: 5rem;
+    }
+
+    .lead {
+      color: #CB4335;
+    }
+
+    .mastfoot {
+      margin-top: 20%;
+      color: #fff;
+    }
+
+    /*.site-wrapper {
+      background-color: rgba(255,255,255,0.3);
+      background-blend-mode: lighten;
+    }*/
+}
+
+@media only screen and (max-width: 772px) {
+    .cover-heading {
+      margin-top: -2rem;
+    }
+    h3.masthead-brand {
+    font-size: 1rem;
+    margin-left: -8rem;
+  }
+
+}    
+
+/* Modal styles */
+
+.modal-dialog {
+      width: 90%;
+      height: 90%;
+      padding: 0;
+      margin:0 auto;
+      border: 2px solid black;
+}
+
+.modal-content {    
+      height: 100%;
+      border-radius: 0;
+      color:black;
+      overflow:auto;
+      background-color: #DD998A;
+}
+
+.repo, .demo {
+  color:  #DCDCDC;
+}
+
+.changeTextColor {
+  color: #fff;
+}
+
+/* Skillset section */
+
+ul#index_cards {
+  margin-top:50px;
+  text-align:center;
+}
+  
+ul#index_cards li {
+  height:10em;
+  width:10em;
+  display:block;
+  float:left;
+  align-content: center;
+  border:1px solid #666;
+  padding:.5em .1em;
+  position:relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-box-shadow: 2px 2px 10px #000;
+  -webkit-box-shadow: 2px 2px 10px #000;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  background-color:#373240;
+  color: #fff;
+}
+
+#card-1 {
+  /*-webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);*/
+  z-index:1;
+  left:5em;
+ /* top:1em;*/
+}
+  
+#card-2 {
+  /*-webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);*/
+  z-index:2;
+  left:0.5em;
+}
+  
+#card-3 {
+  z-index:3;
+  right: 4em;
+}
+  
+#card-4 {
+  /*-webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);*/
+  z-index:2;
+  right:7em;
+
+}
+  
+#card-5 {
+  /*-webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);*/
+  z-index:1;
+  right:0.1em;
+
+}
+
+/* Hover States */
+  
+ul#index_cards li:hover {
+  z-index:4;
+}
+  
+#card-1:hover {
+  -moz-transform: scale(1.1) rotate(-18deg);
+  -webkit-transform: scale(1.1) rotate(-18deg); 
+}
+    
+#card-2:hover {
+  -moz-transform: scale(1.1) rotate(-8deg);
+  -webkit-transform: scale(1.1) rotate(-8deg); 
+}
+  
+#card-3:hover {
+  -moz-transform: scale(1.1) rotate(2deg);
+  -webkit-transform: scale(1.1) rotate(2deg); 
+}
+  
+#card-4:hover {
+  -moz-transform: scale(1.1) rotate(12deg);
+  -webkit-transform: scale(1.1) rotate(12deg); 
+}
+  
+#card-5:hover {
+  -moz-transform: scale(1.1) rotate(22deg);
+  -webkit-transform: scale(1.1) rotate(22deg); 
+}
+
+.blurCard {
+    opacity: 0.3;
+}

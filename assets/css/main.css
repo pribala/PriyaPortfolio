@@ -1,0 +1,45 @@
+.footer {
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+    color: #fff;
+}
+
+a.navbar-brand {
+	color: #CB4335!important;
+	margin-left: 2rem;
+}
+
+.lead {
+	color: #CB4335;;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    a.navbar-brand {
+		font-size: 2rem;
+	}
+    
+    .lead {
+    	font-size: 1.5rem;
+    }
+	
+	h1.main-heading {
+		font-size: 4rem;
+		margin-top: 7rem;
+	}
+
+	.footer {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+    a.navbar-brand {
+		font-size: 1rem;
+    }
+   	
+	h1.main-heading {
+		margin-top: -1rem;
+	}
+} 

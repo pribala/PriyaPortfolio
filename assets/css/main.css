@@ -46,6 +46,7 @@ a.navbar-brand {
 
 @media only screen and (max-width:728px) and (orientation: landscape) {
 	h1.main-heading {
-		margin-top: -2rem;
+		margin-top: -4rem;
+		color: #fff;
 	}
 }

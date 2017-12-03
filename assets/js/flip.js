@@ -67,6 +67,8 @@ $('document').ready(function(){
 	}
 	];
 
+	// Flip the card to show project info on desktop and on smaller screens
+	// show project info in a modal
 	$(".flip-container").hover(function(e){
 		if($(window).width() >= 1024){
   	   		$(this).toggleClass("flipper");
@@ -128,14 +130,9 @@ $('document').ready(function(){
 		}	
 	});
 
-	// $('.nav-link').click(function(){
-	// 	$('.nav-link').removeClass('active');
-	// 	$(this).addClass("active");
-	// });
-
-	$(".navbar-toggler").click(function(){
-		if($(window).width() < 700){
-			$(".cover-heading").toggleClass("changeTextColor");
-		}
-	})
+	// $(".navbar-toggler").click(function(){
+	// 	if($(window).width() < 700){
+	// 		$(".cover-heading").toggleClass("changeTextColor");
+	// 	}
+	// })
 });

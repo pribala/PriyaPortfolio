@@ -50,16 +50,6 @@ body {
    background-size: cover;
 }
 
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 /* Padding for spacing */
 .inner {
   padding: 2rem;
@@ -70,16 +60,7 @@ body {
  * Header
  */
 
-.masthead {
-  margin-bottom: 2rem;
-
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
+/*.nav-masthead .nav-link {
   padding: .25rem .25rem;
   font-weight: 700;
   color: #373240;
@@ -108,14 +89,14 @@ body {
   .nav-masthead {
     float: right;
   }
-}
+}*/
 
 
 /*
  * Cover
  */
 
-.cover {
+/*.cover {
   padding: 0 .5rem;
 }
 
@@ -123,7 +104,7 @@ body {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
-
+*/
 .lead {
   color: #373240;
   font-weight: 600;
@@ -133,18 +114,18 @@ body {
  * Footer
  */
 
-.mastfoot {
+/*.mastfoot {
   color: #373240;
-}
+}*/
 
 
 /*
  * Affix and center
  */
 
-@media (min-width: 40em) {
+/*@media (min-width: 40em) {*/
   /* Pull out the header and footer */
-   .masthead {
+   /*.masthead {
     position: absolute;
     top: 0;
   }
@@ -153,31 +134,31 @@ body {
     position: absolute;
     bottom: 0;
   }
-  
+  */
   /* Start the vertical centering */
   /*.site-wrapper-inner {
     vertical-align: middle;
   }
 */
-.cover-heading {
+/*.cover-heading {
   margin-top: 7rem;
 }
-
+*/
   /* Handle the widths */
-  .masthead,
+ /* .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;  Must be percentage or pixels for horizontal alignment 
   }
-}
+}*/
 
-@media (min-width: 62em) {
+/*@media (min-width: 62em) {
   .masthead,
   .mastfoot,
   .cover-container {
     width: 50rem;
   }
-}
+}*/
 
 /* Portfolio section */
 

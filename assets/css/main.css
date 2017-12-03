@@ -61,6 +61,10 @@ a.navbar-brand {
 	.lead {
     	font-size: 1rem;
     }
+
+    .modal-title {
+    	margin-bottom: 0.5rem;
+    }
 }
 
 .main-heading {
@@ -87,3 +91,4 @@ a.navbar-brand {
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
 }
+

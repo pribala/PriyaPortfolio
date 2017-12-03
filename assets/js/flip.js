@@ -129,10 +129,4 @@ $('document').ready(function(){
 			$('#infoModal').modal('toggle')
 		}	
 	});
-
-	// $(".navbar-toggler").click(function(){
-	// 	if($(window).width() < 700){
-	// 		$(".cover-heading").toggleClass("changeTextColor");
-	// 	}
-	// })
 });

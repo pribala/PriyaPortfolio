@@ -50,12 +50,15 @@ a.navbar-brand {
 
 @media only screen and (max-width:728px) and (orientation: landscape) {
 	h1.main-heading {
-		margin-top: -3rem;
-		font-size: 1rem;
+		margin-top: -2rem;
+		font-size: 1.5rem;
 		/*color: #fff;*/
 	}
 	.footer{
 		position: relative;
 		float: right;
 	}
+	.lead {
+    	font-size: 1rem;
+    }
 }

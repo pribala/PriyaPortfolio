@@ -396,19 +396,19 @@ ul#index_cards li {
   /*-webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);*/
   z-index:2;
-  left:0.5em;
+  left:0.5rem;
 }
   
 #card-3 {
   z-index:3;
-  right: 4em;
+  right: 4rem;
 }
   
 #card-4 {
   /*-webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);*/
   z-index:2;
-  right:7em;
+  right:7rem;
 
 }
   
@@ -416,7 +416,7 @@ ul#index_cards li {
   /*-webkit-transform: rotate(20deg);
   -moz-transform: rotate(20deg);*/
   z-index:1;
-  right:0.1em;
+  right:0.1rem;
 
 }
 

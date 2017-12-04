@@ -50,9 +50,10 @@ body {
    background-size: cover;
 }
 
-.lead {
+.lead, .aboutme {
   color: #CB4335;
   font-weight: 600;
+  font-family: 'Cherry Swash', cursive;
 }
 
 /* Padding for spacing */
@@ -175,6 +176,12 @@ a.navbar-brand {
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
 }
+
+.about-section, .contact-section {
+  text-decoration: none;
+}
+
+/* Portfolio section */
 
 .portfolio-section {
   color: #373240;
